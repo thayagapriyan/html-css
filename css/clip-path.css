@@ -1,0 +1,45 @@
+.parent {
+    width: auto;
+    height: auto;
+    background: lightblue;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.circle {    
+    clip-path: circle(50% at 50% 50%);
+    background: yellow;
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+
+}
+
+.rect-inset {    
+    clip-path: inset(0 0 0 0 round 20px);
+    background: yellow;
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.rect-polygon {    
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background: yellow;
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 150px;
+}
+

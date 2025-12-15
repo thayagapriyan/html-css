@@ -1,0 +1,61 @@
+:root{
+    --dot-color:#FFD400;
+    --dash-color:rgba(100,100,100,0.7);
+}
+
+.demo{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+}
+
+.duration {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    margin: 0 60px;
+    justify-content: center;
+    position: relative;
+    border-radius: 6px;
+    background: var(--dash-color);
+}
+.duration::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translate(-400%, -50%);
+    width: 12px;   /* Size of the circle */
+    height: 12px;
+    background: radial-gradient(circle,
+    #ffff00 0%,
+    #ffd000 40%,
+    #ccaa00 100%
+    );
+    border-radius: 50%;
+}
+
+.duration::after {
+    content: '';
+    position: absolute;
+    transform: translate(-40px,-50%);
+    height: 3px;
+    width: 22px;                 /* Make longer/shorter as you want */
+    border-radius: 2px;
+    background-image: repeating-linear-gradient(90deg,
+        var(--dash-color) 0 7px,
+        transparent 3px 10px
+    );
+}
+
+/* ensure the wrapper does not clip the outside decoration */
+.demo-row, .demo { overflow: visible; }
+
+
+
